@@ -2,13 +2,15 @@ import { faSearch,  faShoppingCart, faUser } from '@fortawesome/free-solid-svg-i
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Navbar,Container,Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
 const NavBar = () => {
     return (
         <Navbar collapseOnSelect className='Navbar-css' expand="lg" bg="white" >
       <Container>
-        <Navbar.Brand className='fs-2' href="#home" > <span className='span-E'>E-</span>Shop</Navbar.Brand>
+        <Link className='logo'  to='/home'>
+        <Navbar.Brand className='fs-2'   > <span className='span-E'>E-</span>Shop</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto link-css  ">
